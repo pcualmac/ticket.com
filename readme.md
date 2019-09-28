@@ -1,4 +1,4 @@
-# Laravel Blog
+# Laravel Ticket System
 
 A simple blog for demonstration purpose. Based on Laravel 5.8
 
