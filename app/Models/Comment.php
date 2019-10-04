@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\User;
-use App\Models\Post;
+use App\Models\Ticket;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
@@ -11,7 +11,7 @@ class Comment extends Model
     protected $fillable = [
         'body',
         'user_id',
-        'post_id'
+        'id'
     ];
 
     protected static function boot()
@@ -27,7 +27,7 @@ class Comment extends Model
 
     public function post()
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(Ticket::class);
     }
 
     public function user()

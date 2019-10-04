@@ -1,8 +1,8 @@
 <?php
 
 use App\User;
-use App\Models\Tag;
-use App\Models\Post;
+use App\Models\Clients;
+use App\Models\Ticket;
 use Faker\Generator;
 use App\Models\Comment;
 use App\Models\Category;
@@ -18,7 +18,7 @@ $factory->define(User::class, function (Generator $faker) {
     ];
 });
 
-$factory->define(Post::class, function (Generator $faker) {
+$factory->define(Ticket::class, function (Generator $faker) {
     return [
         'title'        => $faker->sentence,
         'body'         => $faker->paragraph(30),
@@ -43,7 +43,7 @@ $factory->define(Tag::class, function (Generator $faker) {
 $factory->define(Comment::class, function (Generator $faker) {
     return [
         'user_id' => rand(1, 10),
-        'post_id' => rand(1, 25),
+        'id' => rand(1, 25),
         'body'    => $faker->paragraph
     ];
 });

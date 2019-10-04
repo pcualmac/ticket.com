@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2>
-                            Posts
+                            Ticket
 
                             <a href="{{ url('admin/posts/create') }}" class="btn btn-default pull-right">Create New</a>
                         </h2>

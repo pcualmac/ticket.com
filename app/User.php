@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Models\Post;
+use App\Models\Ticket;
 use App\Models\Comment;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Ticket::class);
     }
 
     public function comments()

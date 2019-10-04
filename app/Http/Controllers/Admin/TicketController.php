@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Tag;
-use App\Models\Post;
+use App\Models\Clients;
+use App\Models\Ticket;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
 
-class PostController extends Controller
+class TicketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with(['user', 'category', 'tags', 'comments'])->paginate(10);
+        $posts = Ticket::with(['user', 'category', 'tags', 'comments'])->paginate(10);
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -44,7 +44,7 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $post = Post::create([
+        $post = Ticket::create([
             'title'       => $request->title,
             'body'        => $request->body,
             'category_id' => $request->category_id

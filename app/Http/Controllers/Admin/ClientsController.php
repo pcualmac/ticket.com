@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Tag;
+use App\Models\Clients;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class TagController extends Controller
+class ClientsController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -19,7 +19,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Admin?</th>
-                                    <th>No of Posts</th>
+                                    <th>No of Ticket</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

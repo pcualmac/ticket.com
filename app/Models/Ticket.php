@@ -3,12 +3,12 @@
 namespace App\Models;
 
 use App\User;
-use App\Models\Tag;
+use App\Models\Clients;
 use App\Models\Comment;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Ticket extends Model
 {
     protected $fillable = [
         'title',

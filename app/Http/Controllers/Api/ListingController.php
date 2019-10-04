@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\User;
-use App\Models\Tag;
+use App\Models\Clients;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

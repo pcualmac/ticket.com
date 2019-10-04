@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\Post;
+use App\Models\Ticket;
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Clients extends Model
 {
     protected $fillable = ['name'];
 
     public function posts()
     {
-        return $this->belongsToMany(Post::class)->withTimestamps();
+        return $this->belongsToMany(Ticket::class)->withTimestamps();
     }
 }

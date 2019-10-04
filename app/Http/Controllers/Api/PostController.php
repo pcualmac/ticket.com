@@ -6,11 +6,11 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PostController extends Controller
+class TicketController extends Controller
 {
     public function index(Request $request)
     {
-        return Post::when($request->title, function($query) use ($request) {
+        return Ticket::when($request->title, function($query) use ($request) {
             return $query->where('title', 'like', "%{$request->title}%");
         })
         ->when($request->search, function($query) use ($request) {

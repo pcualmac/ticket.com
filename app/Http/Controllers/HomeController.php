@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tag;
-use App\Models\Post;
+use App\Models\Clients;
+use App\Models\Ticket;
 use App\Models\Comment;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -27,11 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts      = Post::count();
+        $posts      = Ticket::count();
         $comments   = Comment::count();
-        $tags       = Tag::count();
+        $tags       = Clients::count();
         $categories = Category::count();
 
-        return view('home', get_defined_vars());
+        return view('dashboard', get_defined_vars());
     }
 }
